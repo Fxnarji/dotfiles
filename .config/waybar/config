@@ -1,4 +1,5 @@
 {
+    
     "layer": "top",
     "position": "top",
     "reload_style_on_change": true,
@@ -18,16 +19,12 @@
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "default": "",
             "active": "",
-            "urgent": ""
+            "default": "",
+            "empty": ""
         },
-        "persistent_workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": []
+        "persistent-workspaces": {
+            "*": [ 1,2,3,4,5 ]
         }
     },
     "memory": {
