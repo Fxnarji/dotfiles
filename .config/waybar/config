@@ -1,6 +1,7 @@
 {
     "layer": "top",
     "position": "top",
+    "reload_style_on_change": true,
     "spacing": 0,
     "height": 0,
     "modules-left": [
@@ -11,26 +12,15 @@
         "hyprland/workspaces"
     ],
     "modules-right": [
-        "memory",
-        "tray"
+        "memory"
     ],
 
     "hyprland/workspaces": {
-        "on-click": "activate",
         "format": "{icon}",
         "format-icons": {
-            "default": "",
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5",
-            "6": "6",
-            "7": "7",
-            "8": "8",
-            "9": "9",
-            "active": "x",
-            "urgent": "󱓻"
+            "default": "",
+            "active": "",
+            "urgent": ""
         },
         "persistent_workspaces": {
             "1": [],
@@ -46,12 +36,12 @@
         "max-length": 10
     },
     "tray": {
-        "spacing": 10
+        "spacing": 20
     },
     "clock": {
         "tooltip-format": "{calendar}",
         "format-alt": "  {:%a, %d %b %Y}",
-        "format": "  {:%H:%M %p}"
+        "format": "{:%H:%M} "
     },
     "custom/logo": {
         "format": "  ",
