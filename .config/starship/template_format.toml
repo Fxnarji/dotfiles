@@ -1,0 +1,29 @@
+format = """
+[](green)\
+$os\
+$username\
+[](bg:cyan fg:green)\
+$directory\
+[](fg:cyan bg:green)\
+$c\
+$cpp\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:green bg:red)\
+[](fg:red bg:blue)\
+$docker_context\
+$conda\
+$pixi\
+[ ](fg:blue)\
+$time\
+$git_branch\
+$git_status\
+$line_break$character"""
+
+palette = 'color'
