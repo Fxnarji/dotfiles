@@ -1,0 +1,28 @@
+{
+    "checksum": "4bf3988c9cd8a7052365b3d6de99ce04",
+    "wallpaper": "/home/fxnarji/dotfiles/wallpapers/wlop-18-se.png",
+    "alpha": "100",
+    "special": {
+        "background": "#0b0f1a",
+        "foreground": "#c2c3c5",
+        "cursor": "#c2c3c5"
+    },
+    "colors": {
+        "color0": "#0b0f1a",
+        "color1": "#545969",
+        "color2": "#8F7776",
+        "color3": "#354F87",
+        "color4": "#667389",
+        "color5": "#77859A",
+        "color6": "#9C969F",
+        "color7": "#c2c3c5",
+        "color8": "#5a606f",
+        "color9": "#545969",
+        "color10": "#8F7776",
+        "color11": "#354F87",
+        "color12": "#667389",
+        "color13": "#77859A",
+        "color14": "#9C969F",
+        "color15": "#c2c3c5"
+    }
+}

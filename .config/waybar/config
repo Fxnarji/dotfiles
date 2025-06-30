@@ -6,64 +6,78 @@
     "spacing": 0,
     "height": 0,
     "modules-left": [
-        "custom/logo",
+        "group/group-power",
         "clock"
     ],
     "modules-center": [
         "hyprland/workspaces"
     ],
+
     "modules-right": [
-        "mpris",
-        "cpu",
-        "memory"
+        "mpris"
     ],
 
-    "hyprland/workspaces": {
-        "format": "{icon}",
-        "format-icons": {
-            "active": "",
-            "default": "",
-            "empty": "",
-            "urgent": "󰼅"
+    "group/group-power": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 250,
+            "transition-left-to-right": true
         },
-        "persistent-workspaces": {
-            "*": [ 1,2,3,4,5 ]
-        }
+        "modules": [
+            "custom/logo",
+            "memory",
+            "cpu"
+        ]
+    },
+    "custom/logo": {
+        "format": "  ",
+        "tooltip": false,
+        "on-click": ""
     },
     "memory": {
         "interval": 5,
-        "format": " {}%",
+        "format": "  {}%",
         "max-length": 10
     },
 
     "cpu":{
         "interval": 5,
-        "format": " {}%",
+        "format": "  {}%",
         "max-length": 10
     },
 
-    "tray": {
-        "spacing": 20
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "󰜋",
+            "default": "",
+            "empty": "",
+            "urgent": "󱇎`"
+        },
+        "persistent-workspaces": {
+            "*": [ 1,2,3,4,5 ]
+        }
     },
+
+
     "clock": {
         "tooltip-format": "{calendar}",
         "format-alt": "  {:%a, %d %b %Y}",
         "format": "{:%H:%M} "
     },
-    "custom/logo": {
-        "format": "  ",
-        "tooltip": false
-    },
+
 
     "mpris": {
-	"format": "󰝚 | {player_icon} {title}",
-	"format-paused": " | {status_icon} <i>{title}</i>",
+	"format": "{player_icon}  | {status_icon} {title}",
+	"format-paused": "{player_icon} | {status_icon} <i>{title}</i>",
+    "status_icon":{
+        "paused": "  ",
+        "default":"  "
+    },
 	"player-icons": {
-		"default": "▶",
-		"mpv": "🎵"
-	},
-	"status-icons": {
-		"paused": "⏸"
+        "firefox": "  ",
+		"default": "  "
 	}
-}
+ }
 }

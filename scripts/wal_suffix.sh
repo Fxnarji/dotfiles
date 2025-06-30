@@ -21,7 +21,6 @@ hyprpaper &
 
 ##-----------------------------------------WAYBAR
 #!/bin/bash
-cat ~/.cache/wal/colors-waybar.css ~/.config/waybar/template.css > ~/.config/waybar/style.css
 pkill waybar
 waybar &
 

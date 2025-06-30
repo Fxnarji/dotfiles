@@ -1,47 +1,85 @@
-@define-color foreground #c1c1c3;
-@define-color background #070710;
-@define-color cursor #c1c1c3;
-
-@define-color color0 #070710;
-@define-color color1 #234C5B;
-@define-color color2 #544851;
-@define-color color3 #BD2D37;
-@define-color color4 #E2C836;
-@define-color color5 #3E5C97;
-@define-color color6 #9F63AE;
-@define-color color7 #c1c1c3;
-@define-color color8 #565669;
-@define-color color9 #234C5B;
-@define-color color10 #544851;
-@define-color color11 #BD2D37;
-@define-color color12 #E2C836;
-@define-color color13 #3E5C97;
-@define-color color14 #9F63AE;
-@define-color color15 #c1c1c3;
-
-
+@import "../../.cache/wal/colors-waybar.css";
 
 
 * {
   border: none;
-  border-radius: 0;
-  min-height: 0;
-  font-family: "Fira Code";
-  font-size: 20;
+  border-radius: 0px;
+  min-height: 0px;
+  font-family: Mononoki, "Font Awesome 6 Free", "Font Awesome 6 Brands";
+  font-size: 20px;
+  font-weight: bold;
   min-width: 24px;
   min-height: 24px;
+
 }
 
 window#waybar {
-  all:unset;
-  transition-property: background-color;
-  transition-duration: 0.1s;
+    background-color: transparent;
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 
 window#waybar.hidden {
   opacity: 0.1;
 }
 
+.modules-center {
+  padding:0px 20px;
+  margin:10px 0px 5px 0px;
+  border-radius:40px;
+  background: alpha(@background, .8);
+}    
+
+.modules-left {
+  padding:5px;
+  margin:10px 10px 5px 10px;
+  border-radius:40px;
+  background: alpha(@background, .8);
+}    
+
+#custom-logo{
+  padding-right: 7px;
+  font-size: 15px;
+  color: alpha(@background, .8);
+  border-radius:40px;
+  font-size: 25px;
+  background: @color6;
+  transition: border-radius 0.25s ease;
+}
+
+#custom-logo:hover {
+
+  border-radius:40px 0px 0px 40px;
+
+}
+
+#cpu{
+  padding-left: 10px;
+  padding-right: 5px;
+  color: @color6;
+  background: @color9;
+  border-radius: 0px 20px 20px 0px;
+
+}
+
+#memory{
+  padding-left: 10px;  
+  color: @color6;
+  background: @color9;
+}
+
+#clock {
+  padding: 0px 10px;
+  color: @color6;
+}
+
+
+
+tooltip {
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #131822;
+}
 
 
 #workspaces button {
@@ -52,81 +90,23 @@ window#waybar.hidden {
   color: @color6;
 }
 
-.modules-center {
-    padding:0px 20px;
-    margin:10px 0px 5px 0px;
-    border-radius:40px;
-    background: alpha(@background, .9);
-}
-
-.modules-left {
-    padding:5px;
-    margin:10px 10px 5px 10px;
-    border-radius:40px;
-    background: alpha(@background, .9);
-}
-
-
-
 #workspaces button.urgent {
   color: @color4;
 }
 
-#workspaces button.active {
-  margin: 0px 2px 0px 0px;
+#workspaces button.focused {
+  color: @color4;
 }
 
-
-
-#custom-logo {
-  padding-right: 7px;
-  font-size: 15px;
-  border-radius: 0px 0px 0px 8px;
-  color: @color7;
-  font-size: 25px;
-}
-
-
-
-#clock {
-  padding: 0px 5px;
+/* Keep MPRIS visually separate */
+#mpris {
+  padding: 0px 20px;
+  margin: 10px 10px 5px 0px;
+  border-radius: 40px;
+  background: alpha(@background, .8);
   color: @color6;
 }
 
-#custom-power {
-  background-color: @color3;
-}
-
-
-tooltip {
-  border-radius: 8px;
-  padding: 15px;
-  background-color: #131822;
-}
-
-#memory {
-  padding:0px 20px;
-  margin:10px 10px 5px 0px;
-  border-radius:40px;
-  background: alpha(@background, .9);
-  color: @color6;
-}
-
-#cpu {
-  padding:0px 20px;
-  margin:10px 10px 5px 0px;
-  border-radius:40px;
-  background: alpha(@background, .9);
-  color: @color6;
-}
-
-#mpris{
-  padding:0px 20px;
-  margin:10px 10px 5px 0px;
-  border-radius:40px;
-  background: alpha(@background, .9);
-  color: @color6;
-}
 
 tooltip label {
   padding: 5px;

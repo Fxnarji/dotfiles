@@ -15,15 +15,42 @@ configuration {
     display-run:                "";
     display-filebrowser:        "";
     display-window:             "";
-	drun-display-format:        "{name} [<span weight='light' size='small'></span>]";
+	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
 	window-format:              "{w} · {c} · {t}";
 }
 
 /*****----- Global Properties -----*****/
-@import                          "~/.cache/wal/colors-rofi-dark"
+@import "~/.cache/wal/colors-rofi-dark"
 @import                          "shared/fonts.rasi"
 
+* {
+    border-colour:               var(selected);
+    handle-colour:               var(selected);
+    background-colour:           var(background);
+    foreground-colour:           var(foreground);
+    alternate-background:        var(background-alt);
+    normal-background:           var(background);
+    normal-foreground:           var(foreground);
+    urgent-background:           var(urgent);
+    urgent-foreground:           var(background);
+    active-background:           var(active);
+    active-foreground:           var(background);
+    selected-normal-background:  var(selected);
+    selected-normal-foreground:  var(background);
+    selected-urgent-background:  var(active);
+    selected-urgent-foreground:  var(background);
+    selected-active-background:  var(urgent);
+    selected-active-foreground:  var(background);
+    alternate-normal-background: var(background);
+    alternate-normal-foreground: var(foreground);
+    alternate-urgent-background: var(urgent);
+    alternate-urgent-foreground: var(background);
+    alternate-active-background: var(active);
+    alternate-active-foreground: var(background);
+    selected-urgent-element: var(active);
+    
 
+}
 
 /*****----- Main Window -----*****/
 window {
@@ -77,15 +104,15 @@ inputbar {
 
 prompt {
     enabled:                     true;
-    padding:                     10px 10px;
+    padding:                     5px 10px;
     border:                      0px;
     border-radius:               100%;
     border-color:                @border-colour;
     background-color:            @border-colour;
-    text-color:                  @foreground;
+    text-color:                  @background-colour;
 }
 textbox-prompt-colon {
-    enabled:                     false;
+    enabled:                     true;
     expand:                      false;
     str:                         "::";
     background-color:            inherit;
@@ -98,7 +125,7 @@ entry {
     width:                       200px;
     border-radius:               100%;
     background-color:            @alternate-background;
-    text-color:                  @foreground;
+    text-color:                  @foreground-colour;
     cursor:                      text;
     placeholder:                 "Search...";
     placeholder-color:           inherit;
@@ -187,7 +214,7 @@ element alternate.active {
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        25px;
+    size:                        24px;
     cursor:                      inherit;
 }
 element-text {
