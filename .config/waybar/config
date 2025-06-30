@@ -13,6 +13,8 @@
         "hyprland/workspaces"
     ],
     "modules-right": [
+        "mpris",
+        "cpu",
         "memory"
     ],
 
@@ -21,7 +23,8 @@
         "format-icons": {
             "active": "",
             "default": "",
-            "empty": ""
+            "empty": "",
+            "urgent": "󰼅"
         },
         "persistent-workspaces": {
             "*": [ 1,2,3,4,5 ]
@@ -29,9 +32,16 @@
     },
     "memory": {
         "interval": 5,
-        "format": "󰍛 {}%",
+        "format": " {}%",
         "max-length": 10
     },
+
+    "cpu":{
+        "interval": 5,
+        "format": " {}%",
+        "max-length": 10
+    },
+
     "tray": {
         "spacing": 20
     },
@@ -43,5 +53,17 @@
     "custom/logo": {
         "format": "  ",
         "tooltip": false
-    }
+    },
+
+    "mpris": {
+	"format": "󰝚 | {player_icon} {title}",
+	"format-paused": " | {status_icon} <i>{title}</i>",
+	"player-icons": {
+		"default": "▶",
+		"mpv": "🎵"
+	},
+	"status-icons": {
+		"paused": "⏸"
+	}
+}
 }

@@ -1,23 +1,23 @@
-@define-color foreground #c6c2c2;
-@define-color background #1b0c0c;
-@define-color cursor #c6c2c2;
+@define-color foreground #c1c1c3;
+@define-color background #070710;
+@define-color cursor #c1c1c3;
 
-@define-color color0 #1b0c0c;
-@define-color color1 #494A46;
-@define-color color2 #9E2017;
-@define-color color3 #D01B0D;
-@define-color color4 #F41203;
-@define-color color5 #F82C04;
-@define-color color6 #E9561A;
-@define-color color7 #c6c2c2;
-@define-color color8 #6f5b5b;
-@define-color color9 #494A46;
-@define-color color10 #9E2017;
-@define-color color11 #D01B0D;
-@define-color color12 #F41203;
-@define-color color13 #F82C04;
-@define-color color14 #E9561A;
-@define-color color15 #c6c2c2;
+@define-color color0 #070710;
+@define-color color1 #234C5B;
+@define-color color2 #544851;
+@define-color color3 #BD2D37;
+@define-color color4 #E2C836;
+@define-color color5 #3E5C97;
+@define-color color6 #9F63AE;
+@define-color color7 #c1c1c3;
+@define-color color8 #565669;
+@define-color color9 #234C5B;
+@define-color color10 #544851;
+@define-color color11 #BD2D37;
+@define-color color12 #E2C836;
+@define-color color13 #3E5C97;
+@define-color color14 #9F63AE;
+@define-color color15 #c1c1c3;
 
 
 
@@ -27,7 +27,7 @@
   border-radius: 0;
   min-height: 0;
   font-family: "Fira Code";
-  font-size: 20px;
+  font-size: 20;
   min-width: 24px;
   min-height: 24px;
 }
@@ -49,7 +49,7 @@ window#waybar.hidden {
   margin:10px -2px 10px 0px;
   padding: 0px 0px;
   transition: all .2s ease;
-  color: #cccccc;
+  color: @color6;
 }
 
 .modules-center {
@@ -62,12 +62,6 @@ window#waybar.hidden {
 .modules-left {
     padding:5px;
     margin:10px 10px 5px 10px;
-    border-radius:40px;
-    background: alpha(@background, .9);
-}
-.modules-right {
-    padding:0px 20px;
-    margin:10px 10px 5px 0px;
     border-radius:40px;
     background: alpha(@background, .9);
 }
@@ -96,7 +90,7 @@ window#waybar.hidden {
 
 #clock {
   padding: 0px 5px;
-  color: @color7;
+  color: @color6;
 }
 
 #custom-power {
@@ -111,9 +105,28 @@ tooltip {
 }
 
 #memory {
-  color: @color7;
+  padding:0px 20px;
+  margin:10px 10px 5px 0px;
+  border-radius:40px;
+  background: alpha(@background, .9);
+  color: @color6;
 }
 
+#cpu {
+  padding:0px 20px;
+  margin:10px 10px 5px 0px;
+  border-radius:40px;
+  background: alpha(@background, .9);
+  color: @color6;
+}
+
+#mpris{
+  padding:0px 20px;
+  margin:10px 10px 5px 0px;
+  border-radius:40px;
+  background: alpha(@background, .9);
+  color: @color6;
+}
 
 tooltip label {
   padding: 5px;
