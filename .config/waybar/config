@@ -32,7 +32,7 @@
     "custom/logo": {
         "format": "  ",
         "tooltip": false,
-        "on-click": ""
+        "on-click": "bash /home/fxnarji/dotfiles/scripts/wallpaper-picker.sh"
     },
     "memory": {
         "interval": 5,

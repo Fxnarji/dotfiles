@@ -1,27 +1,49 @@
 #!/bin/bash
 
-# Hardcoded directory
-DIR="$HOME/dotfiles/wallpapers"
-RELOAD= "$HOME/dotfiles/scripts/refresh-global-themes.sh"
+set -euo pipefail
 
-# Make sure directory exists
+cd "$HOME/dotfiles/scripts" || exit 1
+
+DIR="$HOME/dotfiles/wallpapers"
+PREVIEW_DIR="$DIR/.preview"
+LAUNCHER="$HOME/dotfiles/scripts/wallpaper-runner.sh"
+
+# Check required commands
+for cmd in identify convert rofi; do
+  if ! command -v "$cmd" &>/dev/null; then
+    echo "Error: $cmd is not installed or not in PATH."
+    exit 1
+  fi
+done
+
 if [[ ! -d "$DIR" ]]; then
   echo "Directory $DIR not found!"
   exit 1
 fi
 
-# Generate input for rofi with icons
+if [[ ! -x "$LAUNCHER" ]]; then
+  echo "Launcher script $LAUNCHER not found or not executable."
+  exit 1
+fi
+
+mkdir -p "$PREVIEW_DIR"
+
 input=""
-while IFS= read -r -d $'\0' file; do
-  # Get basename for display, full path for icon
+while IFS= read -r -d '' file; do
   name=$(basename "$file")
-  input+="$name\0icon\x1f$file\n"
+  preview_icon="$PREVIEW_DIR/$name"
+
+  if [[ ! -f "$preview_icon" ]]; then
+    height=$(identify -format '%h' "$file")
+    convert "$file" -gravity center -crop "${height}x${height}+0+0" +repage "$preview_icon"
+  fi
+
+  input+="$name\0icon\x1f$preview_icon\n"
 done < <(find "$DIR" -maxdepth 1 -type f \( -iname "*.png" -o -iname "*.jpg" \) -print0)
 
-# Run rofi in dmenu mode with the input
-chosen=$(echo -en "$input" | rofi -dmenu -i -p "Select image:" -config $HOME/dotfiles/.config/rofi/wallpapers/wallpapers_config.rasi)
+chosen=$(printf '%b' "$input" | rofi -dmenu -i -p "Select image:" -config "$HOME/dotfiles/.config/rofi/wallpapers/wallpapers_config.rasi")
 
-# Optional: do something with the selection
 if [[ -n "$chosen" ]]; then
-  "$HOME/dotfiles/scripts/refresh-global-themes.sh" "$DIR/$chosen"
+  # Pass the full path to the launcher script
+  "$LAUNCHER" "$DIR/$chosen"
 fi
