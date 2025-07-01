@@ -1,5 +1,5 @@
 if status is-interactive
-    neofetch
+    fastfetch
 end
 
 starship init fish | source
