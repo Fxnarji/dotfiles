@@ -8,5 +8,5 @@
  **/
 
 * {
-    font: "Mononoki Bold 12";
+    font: "Mononoki bold 12";
 }

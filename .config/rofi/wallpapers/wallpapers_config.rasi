@@ -1,0 +1,235 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Rofi Theme File
+ * Rofi Version: 1.7.3
+ **/
+
+/*****----- Configuration -----*****/
+configuration {
+	modi:                       "drun,run,filebrowser";
+    show-icons:                 false;
+    display-drun:               " Apps";
+    display-run:                " Run";
+    display-filebrowser:        " Files";
+    display-window:             " Windows";
+	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+	window-format:              "{w} · {c} · {t}";
+}
+
+/*****----- Global Properties -----*****/
+@import                          "shared/colors.rasi"
+@import                          "shared/fonts.rasi"
+
+* {     
+    color0:  #1b0c0c;
+    color1:  #494A46;
+    color2:  #9E2017;
+    color3:  #D01B0D;
+    color4:  #F41203;
+    color5:  #F82C04;
+    color6:  #E9561A;
+    color7:  #c6c2c2;
+    color8:  #6f5b5b;
+    color9:  #494A46;
+
+
+     color0-transparent:  #1b0c0ccc;
+     color1-transparent:  #494A46cc;
+     color2-transparent:  #9E2017cc;
+     color3-transparent:  #D01B0Dcc;
+     color4-transparent:  #F41203cc;
+     color5-transparent:  #F82C04cc;
+     color6-transparent:  #E9561Acc;
+     color7-transparent:  #c6c2c2cc;
+     color8-transparent:  #6f5b5bcc;
+     color9-transparent:  #494A46cc;
+
+} 
+
+/*****----- Main Window -----*****/
+window {
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       800px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               20px;
+    border-color:                transparent;
+    cursor:                      "default";
+    /* Backgroud Colors */
+    background-color:            @color0-transparent;
+    /* Backgroud Image */
+    //background-image:          url("/path/to/image.png", none);
+    /* Simple Linear Gradient */
+    //background-image:          linear-gradient(red, orange, pink, purple);
+    /* Directional Linear Gradient */
+    //background-image:          linear-gradient(to bottom, pink, yellow, magenta);
+    /* Angle Linear Gradient */
+    //background-image:          linear-gradient(45, cyan, purple, indigo);
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     20px;
+    border:                      0px solid;
+    border-radius:               0px 0px 0px 0px;
+    border-color:                transparent;
+    background-color:            transparent;
+    children:                    [ "inputbar", "message", "listview", "mode-switcher" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     false;
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                transparent;
+    background-color:            transparent;
+    text-color:                  @color6;
+    children:                    [ "entry", "num-filtered-rows"];
+}
+
+prompt {
+    enabled:                     false;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+textbox-prompt-colon {
+    enabled:                     false;
+    expand:                      false;
+    str:                         "::";
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+entry {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Search...";
+    placeholder-color:           inherit;
+}
+num-filtered-rows {
+    enabled:                     true;
+    expand:                      false;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+textbox-num-sep {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "/";
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+num-rows {
+    enabled:                     true;
+    expand:                      false;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+case-indicator {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       2;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     5px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                transparent;
+    background-color:            transparent;
+    text-color:                  @color6;
+    cursor:                      "default";
+}
+
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     2px 2px;
+    border:                      0px solid;
+    border-radius:               5px;
+    border-color:                transparent;
+    background-color:            transparent;
+    text-color:                  transparent;
+    cursor:                      pointer;
+    children:["element-icon"];
+}
+element normal.normal {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+element normal.urgent {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+element normal.active {
+    background-color:            @color6;
+    text-color:                  inherit;
+}
+element selected.normal {
+    background-color:            @color6;
+    text-color:                  inherit;
+}
+element selected.urgent {
+    background-color:            @color6;
+    text-color:                  inherit;
+}
+element selected.active {
+    background-color:            @color6;
+    text-color:                  inherit;
+}
+element alternate.normal {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+element alternate.urgent {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+element alternate.active {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                         200px;
+    cursor:                      inherit;
+}

@@ -44,12 +44,12 @@ window#waybar.hidden {
   border-radius:40px;
   font-size: 25px;
   background: @color6;
-  transition: border-radius 0.25s ease;
+  transition: border-radius 0.125s ease;
 }
 
 #custom-logo:hover {
 
-  border-radius:40px 0px 0px 40px;
+  border-radius: 10px;
 
 }
 
@@ -57,7 +57,7 @@ window#waybar.hidden {
   padding-left: 10px;
   padding-right: 5px;
   color: @color6;
-  background: @color9;
+  background: transparent;
   border-radius: 0px 20px 20px 0px;
 
 }
@@ -65,7 +65,7 @@ window#waybar.hidden {
 #memory{
   padding-left: 10px;  
   color: @color6;
-  background: @color9;
+  background: transparent;
 }
 
 #clock {

@@ -33,3 +33,8 @@ end
 
 alias google toggle_dns_google
 alias hole toggle_dns_pi
+
+
+function wallpaper
+    ~/dotfiles/scripts/wallpaper-picker.sh
+end
