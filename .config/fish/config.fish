@@ -1,4 +1,4 @@
-if status is-interactive
+    if status is-interactive
     fastfetch
 end
 
@@ -8,7 +8,7 @@ function sudo_last
     eval sudo $history[1]
 end
 
-alias sudo!! sudo_last
+
 
 
 function toggle_dns_pi
@@ -31,10 +31,18 @@ function fish_config
 end
 
 
-alias google toggle_dns_google
-alias hole toggle_dns_pi
+function hyprconf 
+    code "$HOME/dotfiles/.config/hypr/hyprland.conf"
+end
+
+
+
 
 
 function wallpaper
     ~/dotfiles/scripts/wallpaper-picker.sh
 end
+
+alias google toggle_dns_google
+alias hole toggle_dns_pi
+alias sudo!! sudo_last

@@ -25,6 +25,8 @@ scripts=(
   "restart-waybar.sh"
   "generate-rofi-launcher.sh"
   "generate-rofi-wallpaper-picker.sh"
+  "generate-blender-theme.sh"
+  "set-blender-splash.sh"
 )
 
 for script in "${scripts[@]}"; do

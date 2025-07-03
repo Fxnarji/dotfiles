@@ -1,0 +1,10 @@
+/home/fxnarji/Downloads/will be deleted/Collage.blend
+/mnt/VizDev/AudioVis/03_Production/Assets/02_Environments/ENV_Bossroom/Scenefiles/mod/Layout/ENV_Bossroom_Layout_v0002.blend
+/mnt/VizDev/AudioVis/03_Production/Assets/02_Environments/ENV_Bossroom/Scenefiles/mod/Layout/ENV_Bossroom_Layout_v0001.blend
+/mnt/VizDev/AudioVis/03_Production/Assets/02_Environments/ENV_LavaPath/Scenefiles/mod/Layout/ENV_LavaPath_Layout_v0001.blend
+/home/fxnarji/Github/squared-media-rig-ui/lib/SQM-Default-Rig.blend
+/home/fxnarji/.config/blender/4.4/extensions/vscode_development/squared-media-rig-ui/lib/SQM-Default-Rig.blend
+/mnt/Blender/Projekte/Zombie_game/Assets/blend_files/gladius_s_werkzeuge.blend
+/mnt/Blender/Projekte/Zombie_game/Assets/blend_files/fridge.blend
+/home/fxnarji/.config/blender/4.4/config/startup/bl_app_templates_user/VSCode/startup.blend
+/home/fxnarji/.config/blender/4.4/config/bl_app_template_user/VSCode/startup.blend

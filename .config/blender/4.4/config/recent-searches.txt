@@ -1,0 +1,20 @@
+Input ▸ UV Map
+UVMap
+Converter ▸ Separate XYZ
+Converter ▸ Color Ramp
+File ▸ Defaults ▸ Save Startup File
+Solidify
+Mesh ▸ Operations ▸ Mesh to Volume
+Volume ▸ Operations ▸ Volume to Mesh
+Geometry ▸ Write ▸ Set Position
+Texture ▸ Noise Texture
+Geometry ▸ Read ▸ Position
+Attribute ▸ Blur Attribute
+Mesh ▸ Write ▸ Set Shade Smooth
+Mix Shader ▸ Shader
+wm.save_homefile ▸Save Startup File
+Shader ▸ Emission
+Converter ▸ Mix
+Shader ▸ Transparent BSDF
+Shader ▸ Mix Shader
+Input ▸ RGB
