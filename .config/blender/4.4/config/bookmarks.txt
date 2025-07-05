@@ -1,12 +1,4 @@
 [Bookmarks]
+/mnt/Stan/Blender/
 [Recent]
-/home/fxnarji/Downloads/will be deleted/
-/home/fxnarji/dotfiles/.config/blender/4.4/scripts/startup/bl_app_templates_user/Fxnarji/
-/home/fxnarji/Downloads/
-/mnt/VizDev/AudioVis/03_Production/Assets/02_Environments/ENV_Bossroom/Scenefiles/mod/Layout/
-/mnt/VizDev/AudioVis/03_Production/Assets/02_Environments/ENV_LavaPath/Scenefiles/mod/Layout/
-/home/fxnarji/Github/squared-media-rig-ui/lib/
-/mnt/Blender/Addons/ZenUV/Zen UV - Core Library/
-/mnt/Blender/Addons/
-/mnt/Blender/Addons/ZenUV/
-/usr/share/blender/4.4/scripts/startup/bl_app_templates_system/VSCode/
+/mnt/Stan/Blender/Addons/

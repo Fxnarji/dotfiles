@@ -8,6 +8,8 @@ WALLPAPER=$(<~/.cache/wal/wal)
 cat > ~/.config/hypr/hyprpaper.conf <<EOF
 preload = $WALLPAPER
 wallpaper = DP-6,$WALLPAPER
+wallpaper = HDMI-A-2,$WALLPAPER
+
 EOF
 
 pkill hyprpaper

@@ -18,3 +18,4 @@ Converter ▸ Mix
 Shader ▸ Transparent BSDF
 Shader ▸ Mix Shader
 Input ▸ RGB
+Generate ▸ Mirror
