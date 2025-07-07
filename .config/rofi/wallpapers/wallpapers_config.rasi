@@ -24,28 +24,28 @@ configuration {
 @import                          "shared/fonts.rasi"
 
 * {     
-    color0:  #101315;
-    color1:  #4D6876;
-    color2:  #567687;
-    color3:  #637C8A;
-    color4:  #688A98;
-    color5:  #6F95A4;
-    color6:  #7FADC2;
-    color7:  #c3c4c4;
-    color8:  #5a676e;
-    color9:  #4D6876;
+    color0:  #0d1e1c;
+    color1:  #3F3C44;
+    color2:  #6A5C4E;
+    color3:  #625E59;
+    color4:  #A05552;
+    color5:  #97826B;
+    color6:  #A59F92;
+    color7:  #c2c6c6;
+    color8:  #5c706e;
+    color9:  #3F3C44;
 
 
-     color0-transparent:  #101315cc;
-     color1-transparent:  #4D6876cc;
-     color2-transparent:  #567687cc;
-     color3-transparent:  #637C8Acc;
-     color4-transparent:  #688A98cc;
-     color5-transparent:  #6F95A4cc;
-     color6-transparent:  #7FADC2cc;
-     color7-transparent:  #c3c4c4cc;
-     color8-transparent:  #5a676ecc;
-     color9-transparent:  #4D6876cc;
+     color0-transparent:  #0d1e1ccc;
+     color1-transparent:  #3F3C44cc;
+     color2-transparent:  #6A5C4Ecc;
+     color3-transparent:  #625E59cc;
+     color4-transparent:  #A05552cc;
+     color5-transparent:  #97826Bcc;
+     color6-transparent:  #A59F92cc;
+     color7-transparent:  #c2c6c6cc;
+     color8-transparent:  #5c706ecc;
+     color9-transparent:  #3F3C44cc;
 
 } 
 

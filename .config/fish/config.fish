@@ -36,11 +36,17 @@ function hyprconf
 end
 
 
-
-
+function b
+    headsetcontrol -b | grep Level
+end
 
 function wallpaper
     ~/dotfiles/scripts/wallpaper-picker.sh
+end
+
+
+function inv
+    code $(fzf -m --preview="bat --color=always {}")
 end
 
 alias google toggle_dns_google

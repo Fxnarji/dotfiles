@@ -34,8 +34,8 @@
     "show_batch_ops_in_main_layout_with_stack_style": true,
     "batch_ops_reports": [
         "APPLY",
-        "TOGGLE_VISIBILITY",
-        "REMOVE"
+        "REMOVE",
+        "TOGGLE_VISIBILITY"
     ],
     "popup_width": 300,
     "mod_list_def_len": 7,
@@ -277,10 +277,10 @@
         },
         "MESH_SEQUENCE_CACHE": {
             "read_data": [
-                "POLY",
-                "VERT",
+                "COLOR",
                 "UV",
-                "COLOR"
+                "VERT",
+                "POLY"
             ],
             "use_vertex_interpolation": true,
             "velocity_scale": 1.0

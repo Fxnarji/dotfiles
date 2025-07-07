@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Hardcoded paths
-template_file="$HOME/dotfiles/.config/rofi/launcher/launcher_template.rasi"
+template_file="$HOME/dotfiles/.config/rofi/launcher/launcher_template_center.rasi"
 output_file="$HOME/.config/rofi/launcher/launcher_config.rasi"
 color_file="$HOME/.cache/wal/colors"
 

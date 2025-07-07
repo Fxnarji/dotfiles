@@ -1,4 +1,11 @@
 [Bookmarks]
 /mnt/Stan/Blender/
 [Recent]
+/home/fxnarji/Downloads/
+/home/fxnarji/mc_ressources/assets/minecraft/textures/entity/equipment/humanoid_leggings/
+/home/fxnarji/Github/squared-media-rig-ui/lib/textures/armor/
+/home/fxnarji/mc_ressources/assets/minecraft/textures/item/
+/home/fxnarji/Github/squared-media-rig-ui/lib/textures/
+/home/fxnarji/Github/squared-media-rig-ui/lib/
+/home/fxnarji/Desktop/ExportTest/
 /mnt/Stan/Blender/Addons/

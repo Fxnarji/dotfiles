@@ -43,6 +43,3 @@ for script in "${scripts[@]}"; do
 done
 
 echo "All scripts executed successfully."
-
-
-

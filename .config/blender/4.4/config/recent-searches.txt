@@ -1,6 +1,5 @@
 Input ▸ UV Map
 UVMap
-Converter ▸ Separate XYZ
 Converter ▸ Color Ramp
 File ▸ Defaults ▸ Save Startup File
 Solidify
@@ -19,3 +18,4 @@ Shader ▸ Transparent BSDF
 Shader ▸ Mix Shader
 Input ▸ RGB
 Generate ▸ Mirror
+Converter ▸ Separate XYZ
