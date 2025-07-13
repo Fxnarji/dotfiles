@@ -277,9 +277,9 @@
         },
         "MESH_SEQUENCE_CACHE": {
             "read_data": [
-                "COLOR",
                 "UV",
                 "VERT",
+                "COLOR",
                 "POLY"
             ],
             "use_vertex_interpolation": true,
