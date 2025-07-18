@@ -1,0 +1,149 @@
+Input ▸ UV Map
+UVMap
+File ▸ Defaults ▸ Save Startup File
+Solidify
+Attribute ▸ Blur Attribute
+Mix Shader ▸ Shader
+wm.save_homefile ▸Save Startup File
+Shader ▸ Emission
+Converter ▸ Mix
+Shader ▸ Transparent BSDF
+Shader ▸ Mix Shader
+Input ▸ RGB
+Generate ▸ Mirror
+Converter ▸ Separate XYZ
+Converter ▸ Separate Color
+Color ▸ Hue/Saturation/Value
+Converter ▸ Color Ramp
+Texture ▸ Image Texture
+Converter ▸ Combine Color
+   Stylized_Rock_roughness.jpg
+Color ▸ Invert Color
+Color ▸ Mix ▸ Combine Color
+Color ▸ Color Ramp
+Input ▸ Image
+   Stylized_Rock_ambientocclusion.jpg
+   Stylized_Rock_normal.jpg
+   Stylized_Rock_basecolor.png
+Output ▸ File Output
+  SQM-WGT-Armor-Leg-Lower.L
+  SQM-WGT-Armor-Leg-Upper.L
+WGT-Armor-Lower-Leg.L
+MCH-Armor-Body-Target
+MCH-Armor-Body-Middle
+  SQM-WGT-Armor-Body-Top
+WGT-Armor-Body
+  SQM-WGT-Armor-Body-Bot
+ F Steeeevve
+ F SQM_CH_Default Rig
+  SQM-00_MAT
+squaredmedia.dummy ▸Dummy
+squaredmedia.namecharacter ▸FILE_OT_NameCharacter
+object.dummy ▸Dummy
+Input ▸ Constant ▸ Image
+Image Info ▸ Image
+Image Texture ▸ Image
+Delete Geometry ▸ Geometry
+Face Corner ▸UVMap|2D Vector
+Mesh ▸ Read ▸ Mesh Island
+Boolean Math ▸ And
+Clamp ▸ Value
+Mesh ▸ Read ▸ Face Area
+Utilities ▸ Math ▸ Clamp
+Utilities ▸ Math ▸ Integer Math
+ 0 Armor-Helmet
+Mesh ▸ Topology ▸ Corners of Vertex
+Capture Attribute ▸ Geometry
+Face_ID
+Point ▸Face_ID|Integer
+side_mask
+Geometry ▸ Sample ▸ Sample Nearest
+Face ▸side_mask|Boolean
+Edge ▸Face_ID|Integer
+Geometry ▸ Sample ▸ Raycast
+Sample Nearest ▸ Geometry
+Add Modifier ▸ Geometry Nodes
+F Solidify Plus Free
+Mesh ▸ Primitives ▸ Cube
+Geometry ▸ Operations ▸ Transform Geometry
+Normal
+Input ▸ Constant ▸ Vector
+Utilities ▸ Matrix ▸ Multiply Matrices
+Group ▸ Group Input
+Point ▸Corner|Boolean
+Mesh ▸ Set Attribute
+Attribute ▸ Store Named Attribute
+Geometry ▸ Read ▸ Named Attribute
+IsCorner
+Boolean Math ▸ Or
+Set Position ▸ Geometry
+Utilities ▸ Vector ▸ Vector Math
+Mesh ▸ Read ▸ Edge Neighbors
+Evaluate on Domain ▸ Value
+Geometry ▸ Sample ▸ Sample Index
+Boolean Math ▸ Not
+Attribute ▸ Capture Attribute
+Sample Index ▸ Index
+Extrude Mesh ▸ Mesh
+Geometry ▸ Read ▸ Normal
+Mesh ▸ Read ▸ Edge Angle
+Mix ▸ Overlay
+Utilities ▸ Vector ▸ Mix Vector
+Utilities ▸ Math ▸ Mix
+  Geometry Nodes
+  Geometry Nodes.001
+ 0 netherite.png
+   netherite.png
+   gold.png
+ 0 diamond.png
+   diamond.png
+Mesh ▸ Operations ▸ Split Edges
+Mesh ▸ Operations ▸ Extrude Mesh
+Geometry ▸ Operations ▸ Bounding Box
+Utilities ▸ Vector ▸ Separate XYZ
+Mesh ▸ Read ▸ Edge Vertices
+Vector Math ▸ Distance
+Utilities ▸ Field ▸ Accumulate Field
+Utilities ▸ Field ▸ Evaluate on Domain
+Utilities ▸ Field ▸ Evaluate at Index
+Utilities ▸ Math ▸ Math
+Curve ▸ Operations ▸ Merge Layers
+Geometry ▸ Operations ▸ Merge by Distance
+Mesh ▸ Read ▸ Face Neighbors
+Geometry ▸ Operations ▸ Delete Geometry
+Utilities ▸ Math ▸ Compare
+Generate ▸ Solidify
+Generate ▸ Remesh
+sqm_armory.settextures ▸SetTexurres
+sqm_armory.import_textures ▸Imports Textures from Minecraft
+
+Texture ▸ Checker Texture
+Input ▸ Attribute
+Input ▸ Constant ▸ Boolean
+Mesh ▸ Operations ▸ Mesh Boolean
+Input ▸ Constant ▸ Collection
+   Boolean
+Collection Info ▸ Collection
+Mesh ▸ Operations ▸ Mesh to Volume
+Volume ▸ Operations ▸ Volume to Mesh
+Mesh ▸ Write ▸ Set Shade Smooth
+Texture ▸ Noise Texture
+Vector Math ▸ Subtract
+Instances ▸ Instance Scale
+Mesh ▸ Primitives ▸ Mesh Circle
+Mesh ▸ Operations ▸ Subdivide Mesh
+Geometry ▸ Read ▸ Index
+Integer Math ▸ Add
+Compare ▸ Equal
+Vector Math ▸ Scale
+Mesh to Curve ▸ Mesh
+Split to Instances ▸ Geometry
+Curve to Mesh ▸ Curve
+Curve ▸ Primitives ▸ Curve Circle
+Curve ▸ Operations ▸ Resample Curve
+Geometry ▸ Write ▸ Set Position
+Mesh ▸ Operations ▸ Scale Elements
+Geometry ▸ Read ▸ Position
+Blur Attribute ▸ Value
+Select ▸ Checker Deselect
+Edge (Ctrl E) ▸ Un-Subdivide

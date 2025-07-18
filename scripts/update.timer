@@ -1,0 +1,15 @@
+[Unit]
+Description = Timer to update System
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=1hour
+
+[Install]
+WantedBy=timers.target
+
+
+
+
+
+

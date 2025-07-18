@@ -1,12 +1,15 @@
+/home/fxnarji/.config/blender/4.4/extensions/vscode_development/squared-media-rig-ui/lib/SQM-Default-Rig.blend
+/home/fxnarji/.config/blender/4.4/extensions/vscode_development/squared-media-armory/lib/blendfiles/SQM-Armory.blend
+/home/fxnarji/Github/squared-media-rig-ui/lib/SQM-Default-Rig.blend
+/mnt/Stan/AudioVisProj/AudioVis/03_Production/Assets/03_Assets/Struckture/Altar/Scenefiles/mod/Modeling/Altar_Modeling_v0001.blend
+/mnt/Stan/AudioVisProj/AudioVis/03_Production/Assets/02_Environments/ENV_Bossroom/Scenefiles/mod/Layout/ENV_Bossroom_Layout_v0006.blend
+/home/fxnarji/Downloads/Altare.blend
 /home/fxnarji/Documents/SampleProject/NewEnvironment/NewEnvironment-layout.blend
 /home/fxnarji/Documents/SampleProject/Suzanne/Suzanne-rigging.blend
 /home/fxnarji/Documents/SampleProject/Suzanne/Suzanne-modeling.blend
 /home/fxnarji/Documents/SampleProject/Suzanne/Suzanne-shading.blend
-/home/fxnarji/.config/blender/4.4/extensions/vscode_development/squared-media-armory/lib/blendfiles/SQM-Armory.blend
 /home/fxnarji/Downloads/SolidifyPlus1.1_Free/SolidifyPlus1.1_Free.blend
 /home/fxnarji/.config/blender/4.4/extensions/vscode_development/squared-media-rig-ui/lib/SQM-Armor.blend
-/home/fxnarji/.config/blender/4.4/extensions/vscode_development/squared-media-rig-ui/lib/SQM-Default-Rig.blend
-/home/fxnarji/Github/squared-media-rig-ui/lib/SQM-Default-Rig.blend
 /home/fxnarji/Github/squared-media-rig-ui/lib/SQM-Default-Rig.blend1
 /mnt/windows/Users/Fxnarji/Downloads/SQM-Default-Rig.blend
 /mnt/windows/Users/Fxnarji/Downloads/test_Rig - BPS v3 (Armored).blend
@@ -15,6 +18,3 @@
 /home/fxnarji/Downloads/will be deleted/Collage.blend
 /mnt/VizDev/AudioVis/03_Production/Assets/02_Environments/ENV_Bossroom/Scenefiles/mod/Layout/ENV_Bossroom_Layout_v0002.blend
 /mnt/VizDev/AudioVis/03_Production/Assets/02_Environments/ENV_Bossroom/Scenefiles/mod/Layout/ENV_Bossroom_Layout_v0001.blend
-/mnt/VizDev/AudioVis/03_Production/Assets/02_Environments/ENV_LavaPath/Scenefiles/mod/Layout/ENV_LavaPath_Layout_v0001.blend
-/mnt/Blender/Projekte/Zombie_game/Assets/blend_files/gladius_s_werkzeuge.blend
-/mnt/Blender/Projekte/Zombie_game/Assets/blend_files/fridge.blend

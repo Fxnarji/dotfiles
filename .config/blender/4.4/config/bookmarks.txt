@@ -1,13 +1,13 @@
 [Bookmarks]
 /mnt/Stan/Blender/
 [Recent]
+/home/fxnarji/Downloads/
+/home/fxnarji/.minecraft/versions/1.21.7/
+/home/fxnarji/Github/squared-media-rig-ui/lib/
+/mnt/Stan/AudioVisProj/AudioVis/03_Production/Assets/02_Environments/ENV_Bossroom/Scenefiles/mod/Layout/
 /home/fxnarji/Documents/SampleProject/NewEnvironment/
 /home/fxnarji/Documents/SampleProject/Suzanne/
 /home/fxnarji/Documents/SampleProject/
-/home/fxnarji/.minecraft/versions/1.21.7/
-/home/fxnarji/Downloads/
 /home/fxnarji/.config/blender/4.4/extensions/vscode_development/squared-media-armory/lib/blendfiles/
 /home/fxnarji/mc_ressources/assets/minecraft/textures/item/
 /home/fxnarji/.config/blender/4.4/extensions/vscode_development/squared-media-armory/lib/textures/humanoid/
-/home/fxnarji/.config/blender/4.4/extensions/vscode_development/squared-media-armory/lib/textures/color_palettes/
-/home/fxnarji/Downloads/SolidifyPlus1.1_Free/

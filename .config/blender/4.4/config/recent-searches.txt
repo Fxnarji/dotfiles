@@ -2,9 +2,6 @@ Input ▸ UV Map
 UVMap
 File ▸ Defaults ▸ Save Startup File
 Solidify
-Mesh ▸ Operations ▸ Mesh to Volume
-Volume ▸ Operations ▸ Volume to Mesh
-Texture ▸ Noise Texture
 Attribute ▸ Blur Attribute
 Mix Shader ▸ Shader
 wm.save_homefile ▸Save Startup File
@@ -43,7 +40,6 @@ WGT-Armor-Body
 squaredmedia.dummy ▸Dummy
 squaredmedia.namecharacter ▸FILE_OT_NameCharacter
 object.dummy ▸Dummy
-Mesh ▸ Operations ▸ Subdivide Mesh
 Input ▸ Constant ▸ Image
 Image Info ▸ Image
 Image Texture ▸ Image
@@ -66,13 +62,10 @@ Face ▸side_mask|Boolean
 Edge ▸Face_ID|Integer
 Geometry ▸ Sample ▸ Raycast
 Sample Nearest ▸ Geometry
-Blur Attribute ▸ Value
 Add Modifier ▸ Geometry Nodes
 F Solidify Plus Free
-Mesh ▸ Write ▸ Set Shade Smooth
 Mesh ▸ Primitives ▸ Cube
 Geometry ▸ Operations ▸ Transform Geometry
-Mesh ▸ Operations ▸ Mesh Boolean
 Normal
 Input ▸ Constant ▸ Vector
 Utilities ▸ Matrix ▸ Multiply Matrices
@@ -88,15 +81,11 @@ Utilities ▸ Vector ▸ Vector Math
 Mesh ▸ Read ▸ Edge Neighbors
 Evaluate on Domain ▸ Value
 Geometry ▸ Sample ▸ Sample Index
-Geometry ▸ Read ▸ Index
 Boolean Math ▸ Not
 Attribute ▸ Capture Attribute
-Geometry ▸ Write ▸ Set Position
 Sample Index ▸ Index
-Geometry ▸ Read ▸ Position
 Extrude Mesh ▸ Mesh
 Geometry ▸ Read ▸ Normal
-Vector Math ▸ Scale
 Mesh ▸ Read ▸ Edge Angle
 Mix ▸ Overlay
 Utilities ▸ Vector ▸ Mix Vector
@@ -123,7 +112,6 @@ Curve ▸ Operations ▸ Merge Layers
 Geometry ▸ Operations ▸ Merge by Distance
 Mesh ▸ Read ▸ Face Neighbors
 Geometry ▸ Operations ▸ Delete Geometry
-Compare ▸ Equal
 Utilities ▸ Math ▸ Compare
 Generate ▸ Solidify
 Generate ▸ Remesh
@@ -132,3 +120,29 @@ sqm_armory.import_textures ▸Imports Textures from Minecraft
 
 Texture ▸ Checker Texture
 Input ▸ Attribute
+Input ▸ Constant ▸ Boolean
+Mesh ▸ Operations ▸ Mesh Boolean
+Input ▸ Constant ▸ Collection
+   Boolean
+Collection Info ▸ Collection
+Mesh ▸ Operations ▸ Mesh to Volume
+Volume ▸ Operations ▸ Volume to Mesh
+Mesh ▸ Write ▸ Set Shade Smooth
+Texture ▸ Noise Texture
+Vector Math ▸ Subtract
+Instances ▸ Instance Scale
+Mesh ▸ Primitives ▸ Mesh Circle
+Mesh ▸ Operations ▸ Subdivide Mesh
+Geometry ▸ Read ▸ Index
+Integer Math ▸ Add
+Compare ▸ Equal
+Vector Math ▸ Scale
+Mesh to Curve ▸ Mesh
+Split to Instances ▸ Geometry
+Curve to Mesh ▸ Curve
+Curve ▸ Primitives ▸ Curve Circle
+Curve ▸ Operations ▸ Resample Curve
+Geometry ▸ Write ▸ Set Position
+Mesh ▸ Operations ▸ Scale Elements
+Geometry ▸ Read ▸ Position
+Blur Attribute ▸ Value

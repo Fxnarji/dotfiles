@@ -1,0 +1,13 @@
+[Bookmarks]
+/mnt/Stan/Blender/
+[Recent]
+/home/fxnarji/Downloads/
+/home/fxnarji/Documents/Highlanders/Assets/01-Chars/
+/mnt/Stan/Blender/Addons/ZenUV/Zen UV - Core Library/
+/home/fxnarji/.minecraft/versions/1.21.7/
+/home/fxnarji/Github/squared-media-rig-ui/lib/
+/mnt/Stan/AudioVisProj/AudioVis/03_Production/Assets/02_Environments/ENV_Bossroom/Scenefiles/mod/Layout/
+/home/fxnarji/Documents/SampleProject/NewEnvironment/
+/home/fxnarji/Documents/SampleProject/Suzanne/
+/home/fxnarji/Documents/SampleProject/
+/home/fxnarji/.config/blender/4.4/extensions/vscode_development/squared-media-armory/lib/blendfiles/
