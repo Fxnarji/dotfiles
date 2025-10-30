@@ -15,7 +15,7 @@ fi
 cp "$template_file" "$output_file"
 
 # Read colors into an array
-mapfile -t colors < "$color_file"
+mapfile -t colors <"$color_file"
 
 # Replace placeholders COLOR0, COLOR1 ... in output file
 for i in "${!colors[@]}"; do
