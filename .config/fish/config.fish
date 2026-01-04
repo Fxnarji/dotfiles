@@ -2,6 +2,14 @@ if status is-interactive
     fastfetch
 end
 
+# ~/.config/fish/config.fish
+if not set -q SSH_AUTH_SOCK
+    eval (ssh-agent -c)
+    ssh-add ~/.ssh/github
+end
+
+eval "$(zoxide init fish)"
+
 starship init fish | source
 
 function sudo_last
@@ -53,3 +61,5 @@ alias sudo!! sudo_last
 alias invoice $HOME/Github/pdf-generator/gumscript.sh
 alias update $HOME/scripts/syscheck.sh
 alias summary $HOME/Github/summary-generator/summary-generator.sh
+alias yt yt-x
+alias sync /home/fxnarji/Github/BackupVerifier/gum_init.sh

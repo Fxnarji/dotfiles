@@ -14,7 +14,8 @@
     ],
 
     "modules-right": [
-        "mpris"
+        "mpris",
+        "custom/notification"
     ],
 
     "group/group-power": {
@@ -48,12 +49,12 @@
 
 
     "hyprland/workspaces": {
-        "format": "{icon}",
+        "format": "{name}",
         "format-icons": {
             "active": "󰜋",
             "default": "",
             "empty": "",
-            "urgent": "󱇎`"
+            "urgent": "󱇎"
         },
         "persistent-workspaces": {
             "*": [ 1,2,3,4,5 ]
@@ -66,18 +67,38 @@
         "format-alt": "{:%a, %d %b %Y}",
         "format": "{:%H:%M} "
     },
-
-
+  
     "mpris": {
-	"format": "{player_icon}  | {status_icon} {title}",
-	"format-paused": "{player_icon} | {status_icon} <i>{title}</i>",
-    "status_icon":{
-        "paused": "  ",
-        "default":"  "
+      "format": "{player_icon}  | {status_icon} {title}",
+      "format-paused": "{player_icon} | {status_icon} <i>{title}</i>",
+        "status_icon":{
+            "paused": "  ",
+            "default":"  "
+        },
+      "player-icons": {
+            "firefox": "  ",
+        "default": "  "
+      }
     },
-	"player-icons": {
-        "firefox": "  ",
-		"default": "  "
-	}
- }
+
+    "custom/notification": {
+      "tooltip": true,
+      "format": "<span size='16pt'>{icon}</span>",
+      "format-icons": {
+        "notification": "󱅫",
+        "none": "󰂜",
+        "dnd-notification": "󰂠",
+        "dnd-none": "󰪓",
+        "inhibited-notification": "󰂛",
+        "inhibited-none": "󰪑",
+        "dnd-inhibited-notification": "󰂛",
+        "dnd-inhibited-none": "󰪑"
+      },
+      "return-type": "json",
+      "exec-if": "which swaync-client",
+      "exec": "swaync-client -swb",
+      "on-click": "swaync-client -t -sw",
+      "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  }
 }
