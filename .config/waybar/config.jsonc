@@ -15,7 +15,8 @@
 
     "modules-right": [
         "mpris",
-        "custom/notification"
+        "custom/notification",
+        "tray"
     ],
 
     "group/group-power": {
@@ -49,7 +50,7 @@
 
 
     "hyprland/workspaces": {
-        "format": "{name}",
+        "format": "{icon}",
         "format-icons": {
             "active": "󰜋",
             "default": "",

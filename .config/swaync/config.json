@@ -42,7 +42,6 @@
   },
   "widgets": [
     "label",
-    "buttons-grid",
     "mpris",
     "title",
     "dnd",

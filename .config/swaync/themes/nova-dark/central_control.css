@@ -8,8 +8,8 @@
   color:            @text;
 
   all: unset;
-  font-size: 14px;
-  font-family: "JetBrains Mono Nerd Font 10";
+  font-size: 24px;
+  font-family: "FiraCode Nerd Font";
   transition: 200ms;
 
 }
@@ -30,7 +30,7 @@
   padding: 12px;
 }
 
-/* Notifications  */
+/* Notifications  */╯
 .control-center .notification-row .notification-background,
 .control-center .notification-row .notification-background .notification.critical {
   background-color: @background-alt;
