@@ -12,3 +12,6 @@
 *.bmp
 *.tiff
 *.webp
+
+/.config/blender
+/.config/blender
