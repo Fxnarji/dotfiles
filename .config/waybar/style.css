@@ -1,4 +1,4 @@
-@import "../../.cache/wal/colors-waybar.css";
+@import "../../.cache/matugen/colors-waybar.css";
 
 
 * {
@@ -99,7 +99,7 @@ tooltip {
 
 #workspaces button.active{
   background-color: @color4;
-  color: @background;
+  color: @on_primary_container;
   min-width: 40px;
   transition: all .2s ease;
   border-radius: 40px;
@@ -114,7 +114,7 @@ tooltip {
 
 #workspaces button:hover{
   background-color: @color6;
-  color: @background;
+  color: @on_primary;
   min-width: 50px;
   transition: all .2s ease;
   border-radius: 40px;

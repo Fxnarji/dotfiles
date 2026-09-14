@@ -8,16 +8,13 @@ packages=(
     discord
     fastfetch
     firefox
-    fish
     gitkraken
     grim
     kitty
-    hyprpaper
     hyprshell
     slurp
     python-pip
-    python-pywal16
-    python-pywalfox
+    matugen
     thunar
     ttf-fira-code
     ttf-firacode-nerd

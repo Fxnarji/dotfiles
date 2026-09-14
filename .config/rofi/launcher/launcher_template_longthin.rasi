@@ -20,34 +20,8 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import "~/.cache/wal/colors-rofi-dark"
+@import                          "shared/colors.rasi"
 @import                          "shared/fonts.rasi"
-
-* {     
-    color0:  COLOR0;
-    color1:  COLOR1;
-    color2:  COLOR2;
-    color3:  COLOR3;
-    color4:  COLOR4;
-    color5:  COLOR5;
-    color6:  COLOR6;
-    color7:  COLOR7;
-    color8:  COLOR8;
-    color9:  COLOR9;
-
-
-     color0-transparent:  COLOR0cc;
-     color1-transparent:  COLOR1cc;
-     color2-transparent:  COLOR2cc;
-     color3-transparent:  COLOR3cc;
-     color4-transparent:  COLOR4cc;
-     color5-transparent:  COLOR5cc;
-     color6-transparent:  COLOR6cc;
-     color7-transparent:  COLOR7cc;
-     color8-transparent:  COLOR8cc;
-     color9-transparent:  COLOR9cc;
-
-}
 
 
 

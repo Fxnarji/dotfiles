@@ -1,9 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-# Change to scripts directory for relative calls
-cd "$HOME/dotfiles/scripts" || exit 1
-
 WALL="${1:-}"
 
 if [[ -z "$WALL" ]]; then
@@ -16,30 +13,7 @@ if [[ ! -f "$WALL" ]]; then
   exit 1
 fi
 
-echo "Running wallpaper runner for: $WALL"
+echo "Generating theme for: $WALL"
+matugen image "$WALL" --mode dark
 
-# Array of scripts to run in order
-scripts=(
-  "wallpaper.sh"
-  "generate-starship.sh"
-  "restart-waybar.sh"
-  "generate-rofi-launcher.sh"
-  "generate-rofi-wallpaper-picker.sh"
-  "generate-blender-theme.sh"
-  "set-blender-splash.sh"
-)
-
-for script in "${scripts[@]}"; do
-  if [[ ! -x "$script" ]]; then
-    echo "Error: Script '$script' not found or not executable."
-    exit 1
-  fi
-
-  echo "Executing $script"
-  ./"$script" "$WALL" || {
-    echo "Error running $script"
-    exit 1
-  }
-done
-
-echo "All scripts executed successfully."
+echo "Done."

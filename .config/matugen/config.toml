@@ -1,0 +1,51 @@
+[config]
+# Keep the desktop theme dark regardless of the system light/dark setting.
+fallback_color = "#79a0c3"
+
+# Wallpapers can yield multiple equally "good" source colors. Without this,
+# matugen prompts interactively for a choice - which hangs when launched
+# from rofi/a keybind with no terminal attached.
+prefer = "saturation"
+
+[config.custom_colors]
+# Seed hues for the kitty ANSI palette. Matugen harmonizes these towards the
+# wallpaper's tone, so they stay recognizably red/green/etc. instead of the
+# Material role colors (which can land anywhere on the wheel).
+red = "#ff0000"
+green = "#00ff00"
+yellow = "#ffff00"
+blue = "#0000ff"
+magenta = "#ff00ff"
+cyan = "#00ffff"
+
+[config.wallpaper]
+set = true
+pre_hook = "wl-copy < {{image}}"
+command = "awww img --transition-type wipe --transition-angle 30 --transition-step 30 --transition-duration 1 {{image}}"
+
+[templates.kitty]
+input_path = "./templates/kitty-colors.conf"
+output_path = "~/.cache/matugen/colors-kitty.conf"
+# kitty reloads its config (and the included colors) on SIGUSR1.
+post_hook = "pkill -USR1 -x kitty"
+
+[templates.waybar_swaync]
+input_path = "./templates/colors-waybar.css"
+output_path = "~/.cache/matugen/colors-waybar.css"
+post_hook = "~/dotfiles/scripts/restart-waybar.sh; swaync-client -rs"
+
+[templates.rofi]
+input_path = "./templates/colors-rofi.rasi"
+output_path = "~/.cache/matugen/colors-rofi.rasi"
+
+[templates.gtk3]
+input_path = "./templates/gtk-colors.css"
+output_path = "~/.config/gtk-3.0/colors.css"
+
+[templates.gtk4]
+input_path = "./templates/gtk-colors.css"
+output_path = "~/.config/gtk-4.0/colors.css"
+
+[templates.starship]
+input_path = "./templates/starship.toml"
+output_path = "~/.config/starship.toml"
