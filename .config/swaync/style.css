@@ -1,3 +1,447 @@
 @import '../../.cache/matugen/colors-waybar.css';
-@import 'themes/nova-dark/notifications.css';
-@import 'themes/nova-dark/central_control.css';
+
+/*
+ * Pill-style Material You theme. All colors come from matugen
+ * (see matugen/templates/colors-waybar.css).
+ */
+
+:root {
+  --radius: 20px;
+  --pill-padding: 12px 16px;
+  --mpris-album-art-icon-size: 88px;
+  --notification-icon-size: 48px;
+  --widget-volume-row-icon-size: 20px;
+}
+
+* {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: "FiraCode Nerd Font Propo", "FiraCode Nerd Font", monospace;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+notificationwindow,
+blankwindow,
+.blank-window,
+.floating-notifications {
+  background: transparent;
+}
+
+/* CONTROL CENTER ----------------------------------------------------------- */
+
+.control-center {
+  background: alpha(@surface, 0.8);
+  color: @on_surface;
+  border-radius: 24px;
+  border: none;
+  padding: 6px;
+}
+
+.control-center .control-center-list {
+  background: transparent;
+}
+
+.control-center .control-center-list-placeholder {
+  color: @on_surface_variant;
+  opacity: 0.6;
+}
+
+.widget {
+  margin: 6px 8px;
+  padding: 0;
+  border-radius: var(--radius);
+}
+
+/* Media player */
+.widget-mpris {
+  background: transparent;
+}
+
+.widget-mpris .widget-mpris-player {
+  margin: 0;
+  background: @primary;
+  border-radius: var(--radius);
+  box-shadow: none;
+}
+
+.widget-mpris .widget-mpris-player .mpris-background {
+  opacity: 0;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay {
+  background: transparent;
+  padding: 16px 32px;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay label,
+.widget-mpris .widget-mpris-player .mpris-overlay button {
+  color: @on_primary;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-album-art {
+  border-radius: 16px;
+  box-shadow: none;
+  margin-right: 8px;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-title {
+  font-size: 1.32rem;
+  font-weight: 500;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-subtitle {
+  font-size: 1.03rem;
+  opacity: 0.85;
+}
+
+.widget-mpris button {
+  background: transparent;
+  border: none;
+  border-radius: 100%;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay > box > button:hover {
+  background: alpha(@on_primary, 0.12);
+}
+
+/* Carousel prev/next arrows sit on top of the card edges */
+.widget-mpris > box > button {
+  color: alpha(@on_primary, 0.6);
+  margin: 0 4px;
+}
+
+.widget-mpris > box > button:hover {
+  color: @on_primary;
+  background: transparent;
+}
+
+.widget-mpris > box > button:disabled {
+  opacity: 0.25;
+}
+
+.widget-mpris carouselindicatordots {
+  color: @on_primary;
+}
+
+/* Volume */
+.widget-volume {
+  background: @tertiary;
+  color: @on_tertiary;
+  padding: 8px 12px 8px 16px;
+}
+
+.widget-volume label {
+  color: @on_tertiary;
+  font-size: 1.38rem;
+}
+
+.widget-volume button {
+  background: transparent;
+  color: @on_tertiary;
+  border: none;
+  border-radius: 100%;
+  min-width: 28px;
+  min-height: 28px;
+  padding: 0;
+}
+
+.widget-volume button:hover {
+  background: alpha(@on_tertiary, 0.12);
+}
+
+.widget-volume scale {
+  padding: 0;
+  margin: 0 4px 0 8px;
+}
+
+.widget-volume scale trough {
+  background: alpha(@on_tertiary, 0.35);
+  border: none;
+  border-radius: 999px;
+  min-height: 20px;
+}
+
+.widget-volume scale highlight {
+  background: @on_tertiary_container;
+  border: none;
+  border-radius: 999px;
+  min-width: 20px;
+  min-height: 20px;
+  margin: 0;
+}
+
+/* No knob: the rounded highlight is the handle, so it ends exactly at the
+ * value instead of a circle poking out past the fill. Dragging the trough
+ * still works. */
+.widget-volume scale slider {
+  background: transparent;
+  border: none;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.widget-volume .per-app-volume {
+  background: alpha(@on_tertiary, 0.12);
+  border-radius: 14px;
+  margin: 8px 0 0 0;
+  padding: 4px;
+}
+
+.widget-volume .per-app-volume row {
+  background: transparent;
+}
+
+/* Do not disturb */
+.widget-dnd {
+  background: @primary_container;
+  padding: var(--pill-padding);
+}
+
+.widget-dnd > label {
+  color: @on_primary_container;
+  font-size: 1.15rem;
+  margin-right: 8px;
+}
+
+.widget-dnd switch {
+  background: @surface_container_highest;
+  border: 2px solid @outline;
+  border-radius: 999px;
+  min-width: 40px;
+  min-height: 20px;
+  padding: 0;
+}
+
+.widget-dnd switch:checked {
+  background: @primary;
+  border-color: @primary;
+}
+
+.widget-dnd switch slider {
+  background: @on_surface;
+  border: none;
+  border-radius: 999px;
+  min-width: 18px;
+  min-height: 18px;
+  margin: 1px;
+}
+
+.widget-dnd switch:checked slider {
+  background: @on_primary;
+}
+
+/* Buttons row (cal-ai: Calendar / Chat) */
+.widget-buttons-grid {
+  background: transparent;
+  padding: 0;
+}
+
+.widget-buttons-grid flowboxchild {
+  padding: 0;
+}
+
+.widget-buttons-grid flowboxchild > button {
+  background: @surface_container_highest;
+  color: @on_surface;
+  border: none;
+  border-radius: var(--radius);
+  padding: var(--pill-padding);
+  margin: 0 3px;
+}
+
+.widget-buttons-grid flowboxchild > button:hover {
+  background: mix(@surface_container_highest, @on_surface, 0.12);
+}
+
+/* Notifications title + clear all */
+.widget-title {
+  background: transparent;
+  margin-top: 10px;
+  padding: 0 0 0 4px;
+}
+
+.widget-title > label {
+  color: @on_surface;
+  font-size: 1.32rem;
+  font-weight: 500;
+}
+
+.widget-title > button {
+  background: @on_surface;
+  color: @surface;
+  border: none;
+  border-radius: 100%;
+  min-width: 34px;
+  min-height: 34px;
+  padding: 0;
+  font-size: 1.26rem;
+}
+
+.widget-title > button:hover {
+  background: alpha(@on_surface, 0.8);
+}
+
+/* NOTIFICATIONS (shared between popups and control center) ---------------- */
+
+.notification-row {
+  background: none;
+  outline: none;
+}
+
+.notification-row:focus,
+.notification-group:focus {
+  background: transparent;
+  outline: none;
+}
+
+.notification-row .notification-background {
+  padding: 4px 8px;
+}
+
+.notification-row .notification-background .notification {
+  background: @primary_container;
+  color: @on_primary_container;
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: none;
+}
+
+.notification-row .notification-background .notification.critical {
+  border: 2px solid @error;
+}
+
+.notification-row .notification-background .notification .notification-default-action {
+  background: transparent;
+  color: @on_primary_container;
+  border: none;
+  border-radius: var(--radius);
+  padding: 8px;
+}
+
+.notification-row .notification-background .notification .notification-default-action:hover {
+  background: alpha(@on_primary_container, 0.08);
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .image {
+  border-radius: 10px;
+  margin: 4px 12px 4px 4px;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .summary {
+  color: @on_primary_container;
+  font-size: 1.21rem;
+  font-weight: 500;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .time {
+  color: @on_primary_container;
+  font-size: 1.03rem;
+  font-weight: 500;
+  opacity: 0.8;
+  margin-right: 30px;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .body {
+  color: @on_primary_container;
+  font-size: 1.03rem;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content progressbar trough {
+  background: alpha(@on_primary_container, 0.2);
+  border-radius: 999px;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content progressbar progress {
+  background: @primary;
+  border-radius: 999px;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-entry {
+  background: alpha(@surface, 0.5);
+  color: @on_surface;
+  caret-color: @on_surface;
+  border: none;
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button {
+  background: @primary;
+  color: @on_primary;
+  border: none;
+  border-radius: 999px;
+}
+
+.notification-row .notification-background .notification .notification-alt-actions {
+  background: none;
+  padding: 0 8px 8px 8px;
+}
+
+.notification-row .notification-background .notification .notification-action > button {
+  background: alpha(@on_primary_container, 0.1);
+  color: @on_primary_container;
+  border: none;
+  border-radius: 999px;
+}
+
+.notification-row .notification-background .notification .notification-action > button:hover {
+  background: alpha(@on_primary_container, 0.2);
+}
+
+.close-button {
+  background: alpha(@on_primary_container, 0.15);
+  color: @on_primary_container;
+  border: none;
+  border-radius: 100%;
+  min-width: 24px;
+  min-height: 24px;
+  margin: 8px 8px 0 0;
+  padding: 0;
+}
+
+.close-button:hover {
+  background: alpha(@on_primary_container, 0.3);
+}
+
+/* Groups */
+.notification-group .notification-group-headers,
+.notification-group .notification-group-buttons {
+  color: @on_surface;
+  margin: 0 12px;
+}
+
+.notification-group .notification-group-headers .notification-group-header {
+  color: @on_surface;
+  font-weight: 500;
+}
+
+.notification-group .notification-group-headers .notification-group-icon {
+  color: @on_surface;
+}
+
+.notification-group .notification-group-buttons button {
+  background: alpha(@on_surface, 0.1);
+  color: @on_surface;
+  border: none;
+  border-radius: 999px;
+}
+
+.notification-group .notification-group-buttons button:hover {
+  background: alpha(@on_surface, 0.2);
+}
+
+.notification-group.collapsed .notification-row .notification {
+  background: @primary_container;
+}
+
+.notification-group.collapsed:hover .notification-row:not(:only-child) .notification {
+  background: mix(@primary_container, @on_primary_container, 0.08);
+}
+
+/* Popup notifications get a solid-ish card so they read over any window */
+.floating-notifications .notification-row .notification-background .notification {
+  background: alpha(@primary_container, 0.95);
+}

@@ -1,10 +1,9 @@
 format = """
-[](green)\
+[](green)\
 $os\
 $username\
-[](bg:cyan fg:green)\
+[](bg:cyan fg:green)\
 $directory\
-[](fg:cyan bg:green)\
 $c\
 $cpp\
 $rust\
@@ -15,12 +14,10 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:green bg:red)\
-[](fg:red bg:blue)\
 $docker_context\
 $conda\
 $pixi\
-[ ](fg:blue)\
+[ ](fg:cyan)\
 $time\
 $git_branch\
 $git_status\
@@ -40,31 +37,31 @@ white = '{{ colors.on_surface.default.hex }}'
 error = '{{ colors.error.default.hex }}'
 
 [os]
-disabled = false
+disabled = true
 style = "bg:green fg:foreground"
 
 [os.symbols]
 Windows = "󰍲"
 Ubuntu = "󰕈"
-SUSE = ""
+SUSE = ""
 Raspbian = "󰐿"
 Mint = "󰣭"
 Macos = "󰀵"
-Manjaro = ""
+Manjaro = ""
 Linux = "󰌽"
 Gentoo = "󰣨"
 Fedora = "󰣛"
-Alpine = ""
-Amazon = ""
-Android = ""
+Alpine = ""
+Amazon = ""
+Android = ""
 Arch = "󰣇"
 Artix = "󰣇"
-EndeavourOS = ""
-CentOS = ""
+EndeavourOS = ""
+CentOS = ""
 Debian = "󰣚"
 Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
-Pop = ""
+Pop = ""
 
 [username]
 show_always = true
@@ -80,63 +77,59 @@ truncation_symbol = "…/"
 
 [directory.substitutions]
 "Documents" = "󰈙 "
-"Downloads" = " "
+"Downloads" = " "
 "Music" = "󰝚 "
-"Pictures" = " "
+"Pictures" = " "
 "Developer" = "󰲋 "
 
+
 [nodejs]
-symbol = ""
+symbol = ""
 style = "bg:red"
 format = '[[ $symbol( $version) ](fg:foreground bg:red)]($style)'
 
 [c]
-symbol = " "
-style = "bg:red"
-format = '[[ $symbol( $version) ](fg:foreground bg:red)]($style)'
-
-[cpp]
-symbol = " "
+symbol = " "
 style = "bg:red"
 format = '[[ $symbol( $version) ](fg:foreground bg:red)]($style)'
 
 [rust]
-symbol = ""
+symbol = ""
 style = "bg:red"
 format = '[[ $symbol( $version) ](fg:foreground bg:red)]($style)'
 
 [golang]
-symbol = ""
+symbol = ""
 style = "bg:red"
 format = '[[ $symbol( $version) ](fg:foreground bg:red)]($style)'
 
 [php]
-symbol = ""
+symbol = ""
 style = "bg:red"
 format = '[[ $symbol( $version) ](fg:foreground bg:red)]($style)'
 
 [java]
-symbol = ""
+symbol = ""
 style = "bg:red"
 format = '[[ $symbol( $version) ](fg:foreground bg:red)]($style)'
 
 [kotlin]
-symbol = ""
+symbol = ""
 style = "bg:red"
 format = '[[ $symbol( $version) ](fg:foreground bg:red)]($style)'
 
 [haskell]
-symbol = ""
+symbol = ""
 style = "bg:red"
 format = '[[ $symbol( $version) ](fg:foreground bg:red)]($style)'
 
 [python]
-symbol = ""
+symbol = ""
 style = "bg:red"
 format = '[[ $symbol( $version) ](fg:foreground bg:red)]($style)'
 
 [docker_context]
-symbol = ""
+symbol = ""
 style = "bg:green"
 format = '[[ $symbol( $context) ](fg:#83a598 bg:green)]($style)'
 
@@ -144,23 +137,19 @@ format = '[[ $symbol( $context) ](fg:#83a598 bg:green)]($style)'
 style = "bg:green"
 format = '[[ $symbol( $environment) ](fg:#83a598 bg:green)]($style)'
 
-[pixi]
-style = "bg:green"
-format = '[[ $symbol( $version)( $environment) ](fg:foreground bg:green)]($style)'
-
 [time]
 disabled = false
 time_format = "%R"
 style = "bg:background"
-format = '[[  $time ](fg:foreground bg:background)]($style)'
+format = '[[  $time ](fg:foreground bg:background)]($style)'
 
 [line_break]
 disabled = false
 
 [character]
 disabled = false
-success_symbol = '[](bold fg:magenta)'
-error_symbol = '[](bold fg:error)'
-vimcmd_symbol = '[](bold fg:magenta)'
-vimcmd_replace_one_symbol = '[](bold fg:white)'
-vimcmd_replace_symbol = '[](bold fg:white)'
+success_symbol = '[](bold fg:magenta)'
+error_symbol = '[](bold fg:blue)'
+vimcmd_symbol = '[](bold fg:magenta)'
+vimcmd_replace_one_symbol = '[](bold fg:white)'
+vimcmd_replace_symbol = '[](bold fg:white)'

@@ -41,32 +41,58 @@
     }
   },
   "widgets": [
-    "label",
     "mpris",
-    "title",
+    "volume",
     "dnd",
+    "buttons-grid#cal-ai",
+    "buttons-grid#geode",
+    "title",
     "notifications"
   ],
   "widget-config": {
     "title": {
       "text": "Notifications",
       "clear-all-button": true,
-      "button-text": " 󰎟 "
+      "button-text": "󰅖"
     },
     "dnd": {
       "text": "Do not disturb"
     },
-    "label": {
-      "max-lines": 1,
-      "text": " "
-    },
     "mpris": {
-      "image-size": 96,
-      "image-radius": 12
+      "show-album-art": "always",
+      "loop-carousel": true
     },
     "volume": {
       "label": "󰕾",
-        "show-per-app": true
+      "show-per-app": true,
+      "expand-button-label": "󰅀",
+      "collapse-button-label": "󰅃"
+    },
+    "buttons-grid#cal-ai": {
+      "buttons-per-row": 2,
+      "actions": [
+        {
+          "label": "󰃭  Calendar",
+          "command": "sh -c 'swaync-client -cp; exec gnome-calendar'"
+        },
+        {
+          "label": "󰭹  Chat",
+          "command": "sh -c 'swaync-client -cp; exec /home/fxnarji/Documents/github/Calendar/desktop/cal-ai chat'"
+        }
+      ]
+    },
+    "buttons-grid#geode": {
+      "buttons-per-row": 2,
+      "actions": [
+        {
+          "label": "󰚩  Geode",
+          "command": "sh -c 'swaync-client -cp; exec /home/fxnarji/Documents/github/geode/bin/geode chat'"
+        },
+        {
+          "label": "󰒓  Settings",
+          "command": "sh -c 'swaync-client -cp; exec /home/fxnarji/Documents/github/geode/bin/geode settings'"
+        }
+      ]
     },
     "buttons-grid": {
       "actions": [
